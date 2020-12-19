@@ -1,0 +1,60 @@
+.emboss {
+    /* text-align: center; */
+    position: relative;
+    margin-top: 110px;
+    font-size: 140px;
+    font-family: fantasy;
+    letter-spacing: 7px;
+    color: rgb(218, 218, 218);
+
+    text-shadow: 
+    /*3D effect*/
+    1px 1px 1px rgb(167,167,167),
+    1px 2px 1px rgb(167,167,167),
+    1px 3px 1px rgb(167,167,167),
+
+    2px 2px 1px rgb(167,167,167),
+    2px 3px 1px rgb(167,167,167),
+    2px 4px 1px rgb(167,167,167),
+
+    3px 3px 1px rgb(167,167,167),
+    3px 4px 1px rgb(167,167,167),
+    3px 5px 1px rgb(167,167,167),
+
+    /*long soft bottom*/
+    /* 1px 10px 30px rgba(209, 28, 170, 0.8),
+    1px 10px 70px rgba(209, 28, 170, 0.8),
+    /*short soft bottom*/
+    /* 0px 5px 5px rgba(209, 28, 170, 0.8), */
+    /*left shadow*/
+    /* -5px 5px 20px rgba(209, 28, 170, 0.8), */
+    /*right shadow*/
+    /* 5px 5px 20px rgba(209, 28, 170, 0.8), */ 
+
+    1px 1px 120px rgba(255,255,255,0.5);
+
+    
+}
+
+.emboss::after {
+    content: "Quiz-O-Rama";
+    font-size: 140px;
+    font-family: fantasy;
+    letter-spacing: 7px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    text-shadow: 0px 0px 100px rgba(11,124,199,0.5);
+
+    animation: cycle 4s linear infinite;
+}
+
+@keyframes cycle {
+    90% { text-shadow: 10px 10px 100px rgb(3, 119, 197);}
+    80% { text-shadow: 10px 10px 100px rgb(192, 21, 226);}
+    70% { text-shadow: 10px 10px 100px rgb(7, 197, 93);}
+    60% { text-shadow: 10px 10px 100px rgb(221, 6, 6);}
+    70% { text-shadow: 10px 10px 100px rgb(240, 109, 1);}
+  }

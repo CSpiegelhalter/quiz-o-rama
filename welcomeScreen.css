@@ -1,4 +1,4 @@
-.gameName {
+#gameName {
     /* text-align: center; */
     position: relative;
     margin-top: 110px;
@@ -26,7 +26,7 @@
     1px 1px 120px rgba(255,255,255,0.5); 
 }
 
-.gameName::after {
+#gameName::after {
     content: "Quiz-O-Rama";
     margin-bottom: 20px;
     font-size: 140px;
@@ -48,6 +48,14 @@
     70% { text-shadow: 10px 10px 100px rgb(7, 197, 93);}
     60% { text-shadow: 10px 10px 100px rgb(221, 6, 6);}
     70% { text-shadow: 10px 10px 100px rgb(240, 109, 1);}
+}
+
+#gameName {
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
+}
+#gameName.fade {
+    opacity: 0;    
 }
 
 ul {
@@ -117,4 +125,13 @@ li .start {
     70% { box-shadow: 10px 10px 100px rgb(7, 197, 93);}
     60% { box-shadow: 10px 10px 100px rgb(221, 6, 6);}
     70% { box-shadow: 10px 10px 100px rgb(240, 109, 1);}
+}
+
+#buttons {
+    opacity: 1;
+    transition: .5s ease-in-out;
+}
+
+#buttons.fade {  
+    opacity: 0;
 }

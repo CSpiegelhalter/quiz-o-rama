@@ -1,61 +1,61 @@
-const landmarkSet = [
+const logoSet = [
 
     {  
-        image : "./Assets/landmarks/TheLouvre.jpg",
+        image : "./Assets/logos/android.jpeg",
         choices : ["London, England", "Berlin, Germany", "Rome, Italy", "Paris, France"],
         answer : "Paris, France"
     },
 
     {
-        image : "./Assets/landmarks/Taj-Mahal.jpg",
+        image : "./Assets/logos/delta.png",
         choices : ["Agra, India", "Xi'an, China", "Amsterdam, Netherlands", "Florence, Italy"],
         answer : "Agra, India"
     },
 
     {
-        image : "./Assets/landmarks/stonehenge.jpg",
+        image : "./Assets/logos/mastercard.jpg",
         choices : ["Kenya, Africa", "Wiltshire, England", "Vienna, Austria", "Prague, Czechia"],
         answer : "Wiltshire, England"
     },
 
     {
-        image : "./Assets/landmarks/statueoflibery.jpg",
+        image : "./Assets/logos/motorola.png",
         choices : ["Washington, D.C.", "New York, New York State", "Austin, Texas", "Berlin, Germany"],
         answer : "New York, New York State"
     },
 
     {
-        image : "./Assets/landmarks/rushmore.jpg",
+        image : "./Assets/logos/msnbc.png",
         choices : ["Pennington County, South Dakota", "Jackson, Wyoming", "Great Falls, Montana", "Lincoln, Nebraska"],
         answer : "Pennington County, South Dakota"
     },
 
     {
-        image : "./Assets/landmarks/TowerofPisa.jpg",
+        image : "./Assets/logos/nestle.jpg",
         choices : ["Vienna, Austria", "Budapest, Hungary", "Pisa, Italy", "Nepal, China"],
         answer : "Pisa, Italy"
     },
 
     {
-        image : "./Assets/landmarks/golden-gate-bridge.jpg",
+        image : "./Assets/logos/NYtimes.png",
         choices : ["Helsinki, Finland", "San Antonio, Texas", "Los Angeles, California", "San Francisco, California"],
         answer : "San Francisco, California"
     },
 
     {
-        image : "./Assets/landmarks/Colosseum-Rome-Italy.jpg",
+        image : "./Assets/logos/puma.jpg",
         choices : ["Rome, Italy", "Amsterdam, Netherlands", "Florence, Italy", "Venice, Italy"],
         answer : "Rome, Italy"
     },
 
     {
-        image : "./Assets/landmarks/Christ_the_Redeemer.jpg",
+        image : "./Assets/logos/sprint.png",
         choices : ["Santiago, Chile", "Rio de Janeiro, Brazil", "Quito, Ecuador", "Arequipa, Peru"],
         answer : "Rio de Janeiro, Brazil"
     },
 
     {
-        image : "./Assets/landmarks/Arc-de-Triomphe.jpg",
+        image : "./Assets/logos/starbucks.png",
         choices : ["Frankfurt, Germany", "London, England", "Paris, France", "Brussels, Belgium"],
         answer : "Paris, France"
     }
@@ -80,18 +80,17 @@ console.log("testing");
 function startQuiz() {
 
     setTime();
-    renderLandmarks();
+    renderLogos();
 
 }
 
-
-function renderLandmarks() {
-    console.log("hello world")
+function renderLogos() {
+    renderLogos.called = true;
     myScore.textContent = "Score: " + score;
     optionsEL.innerHTML = ''
     numQuestion++;
-    if (numQuestion < landmarkSet.length) {
-        var questions = landmarkSet[numQuestion];
+    if (numQuestion < logoSet.length) {
+        var questions = logoSet[numQuestion];
         questionImage = questions.image;
         imgEl.setAttribute("src", questionImage)
 
@@ -116,13 +115,14 @@ optionsEL.addEventListener("click", function(event) {
 
     if (questionAnswer === event.target.textContent) {
         score += 10;
-        renderLandmarks()
+        renderLogos()
+    }
         
 
-    } else {
+    else {
         score -= 10;
         timeLeft -= 10;
-        renderLandmarks();
+        renderLogos();
     }
 })
 

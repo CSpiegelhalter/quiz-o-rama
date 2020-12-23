@@ -1,52 +1,26 @@
+
 $("#start").on("click", function() {
-    // var gameName = $("#gameName");
-    // var buttons = $("#buttons");
     $("#gameName").toggleClass("fade");
     $("#buttons").toggleClass("fade");
-    setTimeout(function() { var opacity = window.getComputedStyle(gameName).getPropertyValue("opacity")
-    console.log(opacity);
-    if ((opacity == 0) && (opacity == 0)) {
-        gameName.parentNode.removeChild(gameName);
-        buttons.parentNode.removeChild(buttons);
-        window.location = "chooseGame.html";
-    }
-    else{
-        return;
-    }}, 1000);   
-}); 
-
-$("#back").on("click", function() {
-    window.location.href = 'chooseGame.html';
+    setTimeout(function() {
+        var opacity = window.getComputedStyle(gameName).getPropertyValue("opacity")
+        console.log(opacity);
+        if (opacity == 0) {
+            gameName.parentNode.removeChild(gameName);
+            buttons.parentNode.removeChild(buttons);
+            window.location = "chooseGame.html";
+        } else {
+            return;
+        }
+    }, 1000);
 });
 
-$("#landmarks").on("click", function() {
-    window.location.href = 'game.html';
-    window.location.hash = this.id;
-});
-
-$("#books").on("click", function() {
-    window.location.href = 'game.html';
-    window.location.hash = this.id;
-});
-
-$("#logos").on("click", function() {
-    window.location.href = 'game.html';
-    window.location.hash = this.id;
-});
-
-$("#elements").on("click", function() {
-    window.location.href = 'game.html';
-    window.location.hash = this.id;
-});
-
-// const startingTime = 60;
-// const countdownEl = $("#countdown")
-
-// window.onload = setInterval(timer, 1000);
 
 
-// function timer() {
-//     $("#countdown").text(time);
-//     startingTime--;
-// }
+
+
+
+
+
+
 

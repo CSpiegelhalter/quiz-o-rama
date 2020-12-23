@@ -2,62 +2,62 @@ const logoSet = [
 
     {  
         image : "./Assets/logos/android.jpeg",
-        choices : ["London, England", "Berlin, Germany", "Rome, Italy", "Paris, France"],
-        answer : "Paris, France"
+        choices : ["robot", "samsung", "android", "irobot"],
+        answer : "android"
     },
 
     {
         image : "./Assets/logos/delta.png",
-        choices : ["Agra, India", "Xi'an, China", "Amsterdam, Netherlands", "Florence, Italy"],
-        answer : "Agra, India"
+        choices : ["delta", "united airlines", "discover", "bens"],
+        answer : "delta"
     },
 
     {
         image : "./Assets/logos/mastercard.jpg",
-        choices : ["Kenya, Africa", "Wiltshire, England", "Vienna, Austria", "Prague, Czechia"],
-        answer : "Wiltshire, England"
+        choices : ["discover", "capital one", "visa", "mastercard"],
+        answer : "mastercard"
     },
 
     {
         image : "./Assets/logos/motorola.png",
-        choices : ["Washington, D.C.", "New York, New York State", "Austin, Texas", "Berlin, Germany"],
-        answer : "New York, New York State"
+        choices : ["samsung", "android", "bmw", "motorola"],
+        answer : "motorola"
     },
 
     {
         image : "./Assets/logos/msnbc.png",
-        choices : ["Pennington County, South Dakota", "Jackson, Wyoming", "Great Falls, Montana", "Lincoln, Nebraska"],
-        answer : "Pennington County, South Dakota"
+        choices : ["abc", "msc", "msnbc", "abc family"],
+        answer : "msnbc"
     },
 
     {
         image : "./Assets/logos/nestle.jpg",
-        choices : ["Vienna, Austria", "Budapest, Hungary", "Pisa, Italy", "Nepal, China"],
-        answer : "Pisa, Italy"
+        choices : ["nestle", "dove", "lovelace", "john deer"],
+        answer : "nestle"
     },
 
     {
         image : "./Assets/logos/NYtimes.png",
-        choices : ["Helsinki, Finland", "San Antonio, Texas", "Los Angeles, California", "San Francisco, California"],
-        answer : "San Francisco, California"
+        choices : ["abc", "washington post", "newyork times", "pbs"],
+        answer : "newyork times"
     },
 
     {
         image : "./Assets/logos/puma.jpg",
-        choices : ["Rome, Italy", "Amsterdam, Netherlands", "Florence, Italy", "Venice, Italy"],
-        answer : "Rome, Italy"
+        choices : ["nike", "adidas", "panthers", "puma"],
+        answer : "puma"
     },
 
     {
         image : "./Assets/logos/sprint.png",
-        choices : ["Santiago, Chile", "Rio de Janeiro, Brazil", "Quito, Ecuador", "Arequipa, Peru"],
-        answer : "Rio de Janeiro, Brazil"
+        choices : ["at&t", "sprint", "mobile one", "carrier"],
+        answer : "sprint"
     },
 
     {
         image : "./Assets/logos/starbucks.png",
-        choices : ["Frankfurt, Germany", "London, England", "Paris, France", "Brussels, Belgium"],
-        answer : "Paris, France"
+        choices : ["fresh market", "disney", "starbucks", "starbanks"],
+        answer : "starbucks"
     }
 
 ]

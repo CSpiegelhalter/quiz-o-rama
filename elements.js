@@ -1,3 +1,67 @@
+const elementSet = [
+
+    {  
+        image : "./Assets/logos/al.jpg",
+        choices : ["aluminium", "almightium", "allonium", "alicium"],
+        answer : "aluminium"
+    },
+
+    {
+        image : "./Assets/logos/ca.jpg",
+        choices : ["cadmium", "calcium", "cadmine", "cobalt"],
+        answer : "calcium"
+    },
+
+    {
+        image : "./Assets/logos/cobalt.jpg",
+        choices : ["calcium", "cadmium", "copper", "cobalt"],
+        answer : "cobalt"
+    },
+
+    {
+        image : "./Assets/logos/uranium.jpg",
+        choices : ["plutonium", "uranus", "uranium", "not an element"],
+        answer : "uranium"
+    },
+
+    {
+        image : "./Assets/logos/he.jpg",
+        choices : ["hydrogen", "hemium", "helium", "hemanium"],
+        answer : "helium"
+    },
+
+    {
+        image : "./Assets/logos/p.jpg",
+        choices : ["kasium", "kalium", "krypton", "potassium "],
+        answer : "potassium"
+    },
+
+    {
+        image : "./Assets/logos/hydro.jpg",
+        choices : ["holmium", "hydrogen", "helium", "hassinum"],
+        answer : "hydrogen"
+    },
+
+    {
+        image : "./Assets/logos/nitro.jpg",
+        choices : ["nitrogen", "nether", "nomium", "nicium"],
+        answer : "nitrogen"
+    },
+
+    {
+        image : "./Assets/logos/iron.jpg",
+        choices : ["fenium", "fomium", "iron", "gold"],
+        answer : "iron"
+    },
+
+    {
+        image : "./Assets/logos/mag.jpg",
+        choices : ["manganese", "magnium", "minium", "magnesium"],
+        answer : "magnesium"
+    }
+
+]
+
 var myScore = document.querySelector("#score")
 var optionsEL = document.querySelector("#answerOptions")
 var imgEl = document.querySelector("#imageLandmark")
@@ -9,8 +73,6 @@ timeLeft = 100;
 numQuestion = -1;
 startQuiz();
 var questionImage;
-console.log("testing");
-
 
 function startQuiz() {
 
@@ -48,14 +110,14 @@ function renderElements() {
 
 optionsEL.addEventListener("click", function(event) {
 
+    console.log(event.target.textContent)
     if (questionAnswer === event.target.textContent) {
         score += 10;
-        if (renderLogos.called){
-            renderElements();
-        }
-        
+        renderElements();
 
-    } else {
+    }    
+
+    else {
         score -= 10;
         timeLeft -= 10;
         renderElements();

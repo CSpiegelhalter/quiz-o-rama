@@ -21,6 +21,22 @@ $("#back").on("click", function() {
 
 $("#landmarks").on("click", function() {
     window.location.href = 'game.html';
+    window.location.hash = this.id;
+});
+
+$("#books").on("click", function() {
+    window.location.href = 'game.html';
+    window.location.hash = this.id;
+});
+
+$("#logos").on("click", function() {
+    window.location.href = 'game.html';
+    window.location.hash = this.id;
+});
+
+$("#elements").on("click", function() {
+    window.location.href = 'game.html';
+    window.location.hash = this.id;
 });
 
 // const startingTime = 60;

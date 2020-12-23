@@ -77,4 +77,28 @@ figcaption {
     font-size: 20px;
 }
 
+#score {
+    justify-content: center;
+    background-color: antiquewhite;
+    text-align: center;
+}
+
+.btn-warning {
+    margin-left: 20px;
+}
+
+.highscoresHeader {
+    text-align: center;
+    color: antiquewhite;
+}
+
+#category {
+    margin-top: 100px;
+}
+
+.form-control {
+    position: absolute;
+    max-width: 50px;
+}
+
 

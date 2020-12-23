@@ -62,33 +62,87 @@ const question = [
 
 ]
 
-$(document).ready(function() {
-    for (let index = 0; index < question.length; index++) {
-        $(".questionFigure").attr("src", question[index].image);
-        var choice = question[index].choices
-        for (var options in choice) {
-            var myName = $('<input type="radio">');
+if (window.location = )
 
-            myName.attr("name", options);
-            var myValue = myName.attr("value", question[index].choices[options]);
-            $("#answerOptions").append($('<span>').text(choice[options]).prepend(myName));
-            console.log(myName.attr("value"));
-            console.log(question[index].choices[options]);
-            var myChoice = $(myValue).attr("value");
+
+
+
+
+var myScore = document.querySelector("#score")
+var optionsEL = document.querySelector("#answerOptions")
+var imgEl= document.querySelector("#imageLandmark")
+var timeEl = document.querySelector("#countdown")
+var userLog = document.querySelector(".inputScore")
+score = 0;
+
+timeLeft = 100;
+numQuestion = -1;
+startQuiz();
+var questionImage;
+console.log("testing");
+
+
+function startQuiz(){
+
+setTime();
+renderQuestions();
+
+}
+
+
+function renderQuestions() {
+    myScore.textContent = "Score: " + score;
+    optionsEL.innerHTML = ''
+    numQuestion++;
+    if (numQuestion < question.length) {
+        var questions = question[numQuestion];
+        questionImage = questions.image;
+        imgEl.setAttribute("src", questionImage)
+
+        questionChoices = questions.choices;
+        console.log(questionChoices)
+        questionAnswer = questions.answer;
+
+        for (let i = 0; i < questionChoices.length; i++) {
+            var myOption = document.createElement("button");
+            myOption.textContent = questionChoices[i];
+            myOption.setAttribute("class", "btn-warning p-3 ml-3");
+            myOptionBtrn = optionsEL.appendChild(myOption)
         }
-        
-        console.log(myChoice);
-        // var rightAnswer = myName.attr("value", )
-        if (myChoice == question[index].answer) {
-            // correctAnswer == parseInt(check.attr("value"))) {
-            alert("correct")
-        }
-        else {
-            alert("w")
-            continue;
-        }
-        
-        
-        
     }
-});
+    else {
+        
+        gameEnd()
+    }
+
+}
+
+optionsEL.addEventListener("click", function (event) {
+
+    if (questionAnswer === event.target.textContent){
+        score += 10;
+        renderQuestions();
+
+    }
+    else{
+        score -= 10;
+        timeLeft -=10;
+        renderQuestions();
+}
+})
+
+function setTime() {
+    var timerInterval = setInterval(function() {
+        timeLeft--;
+        timeEl.textContent = timeLeft;
+  
+        if(timeLeft === 0) {
+            clearInterval(timerInterval);
+        }
+    }, 1000);
+  }
+
+function gameEnd() {
+    window.location = "highscores.html";
+    finalScore = score + timeLeft;
+}

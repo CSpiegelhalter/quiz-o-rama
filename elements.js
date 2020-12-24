@@ -1,61 +1,61 @@
 const elementSet = [
 
     {  
-        image : "./Assets/logos/al.jpg",
+        image : "./Assets/elements/al.jpg",
         choices : ["aluminium", "almightium", "allonium", "alicium"],
         answer : "aluminium"
     },
 
     {
-        image : "./Assets/logos/ca.jpg",
+        image : "./Assets/elements/ca.jpg",
         choices : ["cadmium", "calcium", "cadmine", "cobalt"],
         answer : "calcium"
     },
 
     {
-        image : "./Assets/logos/cobalt.jpg",
+        image : "./Assets/elements/cobalt.jpg",
         choices : ["calcium", "cadmium", "copper", "cobalt"],
         answer : "cobalt"
     },
 
     {
-        image : "./Assets/logos/uranium.jpg",
+        image : "./Assets/elements/uranium.jpg",
         choices : ["plutonium", "uranus", "uranium", "not an element"],
         answer : "uranium"
     },
 
     {
-        image : "./Assets/logos/he.jpg",
+        image : "./Assets/elements/he.jpg",
         choices : ["hydrogen", "hemium", "helium", "hemanium"],
         answer : "helium"
     },
 
     {
-        image : "./Assets/logos/p.jpg",
+        image : "./Assets/elements/p.jpg",
         choices : ["kasium", "kalium", "krypton", "potassium "],
         answer : "potassium"
     },
 
     {
-        image : "./Assets/logos/hydro.jpg",
+        image : "./Assets/elements/hydro.jpg",
         choices : ["holmium", "hydrogen", "helium", "hassinum"],
         answer : "hydrogen"
     },
 
     {
-        image : "./Assets/logos/nitro.jpg",
+        image : "./Assets/elements/nitro.jpg",
         choices : ["nitrogen", "nether", "nomium", "nicium"],
         answer : "nitrogen"
     },
 
     {
-        image : "./Assets/logos/iron.jpg",
+        image : "./Assets/elements/iron.jpg",
         choices : ["fenium", "fomium", "iron", "gold"],
         answer : "iron"
     },
 
     {
-        image : "./Assets/logos/mag.jpg",
+        image : "./Assets/elements/mag.jpg",
         choices : ["manganese", "magnium", "minium", "magnesium"],
         answer : "magnesium"
     }

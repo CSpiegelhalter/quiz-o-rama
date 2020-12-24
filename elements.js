@@ -62,17 +62,30 @@ const elementSet = [
 
 ]
 
+var bookQuiz = false;
+var logoQuiz = false;
+var landmarkQuiz = false;
+
+
+localStorage.setItem("bookQuiz", bookQuiz);
+localStorage.setItem("landmarkQuiz", landmarkQuiz);
+localStorage.setItem("logoQuiz", logoQuiz);
+         
+
 var myScore = document.querySelector("#score")
 var optionsEL = document.querySelector("#answerOptions")
 var imgEl = document.querySelector("#imageLandmark")
 var timeEl = document.querySelector("#countdown")
 var userLog = document.querySelector(".inputScore")
+var scoreList = document.querySelector("#ElementScores")
+var userInitials = document.querySelector("input")
+var initials = ""
 score = 0;
 
 timeLeft = 100;
 numQuestion = -1;
-startQuiz();
 var questionImage;
+startQuiz()
 
 function startQuiz() {
 
@@ -122,7 +135,9 @@ optionsEL.addEventListener("click", function(event) {
         timeLeft -= 10;
         renderElements();
     }
-})
+});
+
+
 
 function setTime() {
     var timerInterval = setInterval(function() {
@@ -136,6 +151,10 @@ function setTime() {
 }
 
 function gameEnd() {
-    window.location = "highscores.html";
+    var elementQuiz = true;
+    window.localStorage.setItem("elementQuiz", elementQuiz)
     finalScore = score + timeLeft;
+    window.localStorage.setItem("elementScore", finalScore);
+    window.location = "highscores.html";
+    
 }

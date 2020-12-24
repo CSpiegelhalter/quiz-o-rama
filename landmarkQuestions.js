@@ -62,6 +62,15 @@ const landmarkSet = [
 
 ]
 
+var bookQuiz = false;
+var logoQuiz = false;
+var elementQuiz = false;
+
+
+localStorage.setItem("bookQuiz", bookQuiz);
+localStorage.setItem("elementQuiz", elementQuiz);
+localStorage.setItem("logoQuiz", logoQuiz);
+
 
 var myScore = document.querySelector("#score")
 var optionsEL = document.querySelector("#answerOptions")
@@ -72,10 +81,9 @@ score = 0;
 
 timeLeft = 100;
 numQuestion = -1;
-startQuiz();
 var questionImage;
 console.log("testing");
-
+startQuiz()
 
 function startQuiz() {
 
@@ -138,6 +146,10 @@ function setTime() {
 }
 
 function gameEnd() {
-    window.location = "highscores.html";
+    var landmarkQuiz = true;
+    localStorage.setItem("landmarkQuiz", landmarkQuiz)
     finalScore = score + timeLeft;
+    window.localStorage.setItem("landmarkScore", finalScore);
+    window.location = "highscores.html";
+    
 }

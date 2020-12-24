@@ -62,6 +62,14 @@ const logoSet = [
 
 ]
 
+var landmarkQuiz = false;
+var bookQuiz = false;
+var elementQuiz = false;
+
+
+localStorage.setItem("landmarkQuiz", landmarkQuiz);
+localStorage.setItem("elementQuiz", elementQuiz);
+localStorage.setItem("bookQuiz", bookQuiz);
 
 var myScore = document.querySelector("#score")
 var optionsEL = document.querySelector("#answerOptions")
@@ -70,13 +78,12 @@ var timeEl = document.querySelector("#countdown")
 var userLog = document.querySelector(".inputScore")
 score = 0;
 
+
 timeLeft = 100;
 numQuestion = -1;
-startQuiz();
 var questionImage;
-console.log("testing");
 
-
+startQuiz()
 function startQuiz() {
 
     setTime();
@@ -138,6 +145,9 @@ function setTime() {
 }
 
 function gameEnd() {
-    window.location = "highscores.html";
+    var logoQuiz = true;
+    localStorage.setItem("logoQuiz", logoQuiz)
     finalScore = score + timeLeft;
+    window.localStorage.setItem("logoScore", finalScore);
+    window.location = "highscores.html"; 
 }

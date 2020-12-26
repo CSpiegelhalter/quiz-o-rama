@@ -4,10 +4,10 @@ var logoQuiz = localStorage.getItem("logoQuiz")
 var bookQuiz = localStorage.getItem("bookQuiz")
 
 
-var landmark = JSON.parse(localStorage.getItem(landmark)) || [];
-var element = JSON.parse(localStorage.getItem(element)) || [];
-var logo = JSON.parse(localStorage.getItem(logo)) || [];
-var book = JSON.parse(localStorage.getItem(book)) || [];
+var landmark = JSON.parse(localStorage.getItem("landmark")) || [];
+var element = JSON.parse(localStorage.getItem("element")) || [];
+var logo = JSON.parse(localStorage.getItem("logo")) || [];
+var book = JSON.parse(localStorage.getItem("book")) || [];
 
 var landmarkRecent = JSON.parse(localStorage.getItem('landmarkScore'))
 var elementRecent = localStorage.getItem('elementScore')
@@ -25,7 +25,33 @@ var logoCat = document.querySelector("#logoScores")
 var eleCat = document.querySelector("#ElementScores")
 var userInitials = document.querySelector("#inputScore")
 
-localStorage.getItem(bookCat)
+
+if (landmark !== null) {
+    landCat.innerHTML = landmark.map(score => {
+        return `<li class="high-scores">${score.name}:  ${score.score}</li>`;
+    }).join("");
+} 
+
+if (element !== null) {
+    console.log("hello world")
+    eleCat.innerHTML = element.map(score => {
+        return `<li class="high-scores">${score.name}:  ${score.score}</li>`;
+    }).join("");
+} 
+
+if (logo !== null) {
+    logoCat.innerHTML = logo.map(score => {
+        return `<li class="high-scores">${score.name}:  ${score.score}</li>`;
+    }).join("");
+} 
+
+if (book !== null) {
+    console.log("hello world")
+    bookCat.innerHTML = book.map(score => {
+        return `<li class="high-scores">${score.name}:  ${score.score}</li>`;
+    }).join("");
+} 
+
 
 userInitials.addEventListener('keyup', function(event) {
     if (event.code === 'Enter') {
@@ -38,20 +64,19 @@ userInitials.addEventListener('keyup', function(event) {
                 name: userInitials.value
             };
             landmark.push(scoreToAddd)
-            element.sort( (a,b) => b.score - a.score)
+            landmark.sort( (a,b) => b.score - a.score)
 
             landmark.splice(5);
 
-            localStorage.setItem("element", JSON.stringify(landmark));
+            localStorage.setItem("landmark", JSON.stringify(landmark));
 
             landCat.innerHTML = landmark.map(score => {
-                return `<li class="high-scores">${score.name}-${score.score}</li>`;
+                return `<li class="high-scores">${score.name}:  ${score.score}</li>`;
             }).join("");
 
             landmarkQuiz = false;
             localStorage.setItem("landmarkQuiz", landmarkQuiz);
-
-            console.log(landmark)
+            
         }
 
         else if (elementQuiz == "true") {
@@ -67,12 +92,13 @@ userInitials.addEventListener('keyup', function(event) {
             localStorage.setItem("element", JSON.stringify(element));
 
             eleCat.innerHTML = element.map(score => {
-                return `<li class="high-scores">${score.name}-${score.score}</li>`;
+                return `<li class="high-scores">${score.name}:  ${score.score}</li>`;
             }).join("");
 
             elementQuiz = false;
             localStorage.setItem("elementQuiz", elementQuiz);
             console.log(element)
+            
         }
 
         else if (logoQuiz == "true") {
@@ -85,15 +111,17 @@ userInitials.addEventListener('keyup', function(event) {
 
             logo.splice(5);
 
-            localStorage.setItem("element", JSON.stringify(logo));
+            localStorage.setItem("logo", JSON.stringify(logo));
 
             logoCat.innerHTML = logo.map(score => {
-                return `<li class="high-scores">${score.name}-${score.score}</li>`;
+                return `<li class="high-scores">${score.name}:  ${score.score}</li>`;
             }).join("");
 
+            localStorage.setItem("logoCat", logoCat);
             logoQuiz = false;
-            localStorage.setItem("elementQuiz", logoQuiz);
+            localStorage.setItem("logoQuiz", logoQuiz);
             console.log(logo)
+           
         }
 
         else if (bookQuiz == "true") {
@@ -106,10 +134,10 @@ userInitials.addEventListener('keyup', function(event) {
 
             book.splice(5);
 
-            localStorage.setItem("element", JSON.stringify(book));
+            localStorage.setItem("book", JSON.stringify(book));
 
             bookCat.innerHTML = book.map(score => {
-                return `<li class="high-scores">${score.name}-${score.score}</li>`;
+                return `<li class="high-scores">${score.name}:  ${score.score}</li>`;
             }).join("");
 
             localStorage.setItem("bookCat", bookCat)
@@ -117,6 +145,7 @@ userInitials.addEventListener('keyup', function(event) {
             bookQuiz = false;
             localStorage.setItem("bookQuiz", bookQuiz);
             console.log(book)
+            
         }
         else{
             console.log("ya goofed")
@@ -125,4 +154,3 @@ userInitials.addEventListener('keyup', function(event) {
     
     }
 });
-

@@ -146,6 +146,7 @@ function setTime() {
 
         if (timeLeft === 0) {
             clearInterval(timerInterval);
+            gameEnd()
         }
     }, 1000);
 }

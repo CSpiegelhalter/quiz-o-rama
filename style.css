@@ -14,6 +14,7 @@ body {
     overflow: auto;
 }
 
+/* Highscores categories */
 #categories  {
     width: 100%;
     margin: 10px;
@@ -21,6 +22,7 @@ body {
     object-fit: contain;    
 }
 
+/* Game icon */
 .rounded {
     opacity: 0.5;
     margin-top: 60px;
@@ -28,14 +30,17 @@ body {
     width: 100%;   
 }
 
+/* Goes to full opacity if you hover over it  */
 .rounded:hover {
     opacity: 1;
 }
 
+/* Caption for each game icon */
 figcaption {
     justify-content: center;
 }
 
+/* Main menu button */
 .fa-arrow-left {
     opacity: .5;
     margin-top: 20px;
@@ -45,10 +50,12 @@ figcaption {
     color: antiquewhite;
 }
 
+/* Goes to full opacity if you hover over it  */
 .fa-arrow-left:hover {
     opacity: 1;
 }
 
+/* Question image */
 .questionFigure {
     margin-top: 80px;
     margin-right: 90px;
@@ -61,6 +68,7 @@ figcaption {
     margin-top: 30px;
 }
 
+/* Timer */
 #countdown {
     background-color: antiquewhite;
     color: black;
@@ -70,12 +78,7 @@ figcaption {
     padding: 10px;
 }
 
-.submit {
-    float: right;
-    background-color: antiquewhite;
-    font-size: 20px;
-}
-
+/* Score counter */
 #score {
     justify-content: center;
     background-color: antiquewhite;
@@ -95,17 +98,12 @@ figcaption {
     margin-top: 100px;
 }
 
-.form-control {
-    position: absolute;
-    max-width: 50px;
-}
-
-
 .high-scores {
     color: aliceblue;
     text-align: center;
 }
 
+/* User initials text-box */
 .inputScore {
     float: right;
     margin-right: 30px;

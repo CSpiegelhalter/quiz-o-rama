@@ -1,4 +1,4 @@
-
+// Fades out main menu elements then changes the screen
 $("#start").on("click", function() {
     $("#gameName").toggleClass("fade");
     $("#buttons").toggleClass("fade");
@@ -14,13 +14,3 @@ $("#start").on("click", function() {
         }
     }, 1000);
 });
-
-
-
-
-
-
-
-
-
-

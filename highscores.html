@@ -17,12 +17,15 @@
 
     <div class="container">
         <div class="square">
-          <div class="row">
+            <div class="row">
               <div class="col-md-4">
+
+                <!-- Back to main menu button -->
                 <a class="fas fa-arrow-left" href="index.html" id="back"> Main Menu</a>
+
               </div>
               
-          </div>
+            </div>
             <div class="row">
                 <div class="col-md-12">
                   <h1 class="highscoresHeader">Highscores</h1>
@@ -30,13 +33,17 @@
             </div>
 
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-3">
+
+                    <!-- Highscores for the landmark game -->
                     <h3 class="highscoresHeader" id="category">Landmarks:</h3>
                     <ol id="landmarkScores">
 
                     </ol>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-3">
+
+                  <!-- Highscores for the book cover game -->
                     <h3 class="highscoresHeader" id="category">Judging covers:</h3>
                     <ol id="CoverScores">
 
@@ -47,40 +54,40 @@
 
             <div class="row">
                 <div class="col-md-12">
+
+                    <!-- User will enter their initials here -->
                     <input type="text" placeholder="Enter initials here" class="inputScore" id="inputScore" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-3">
+
+                    <!-- Highscores for the logos game -->
                     <h3 class="highscoresHeader" id="category">Naming logos:</h3>
                     <ol id="logoScores">
 
                     </ol>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-3">
+
+                    <!-- Highscores for the elements game -->
                     <h3 class="highscoresHeader" id="category">Naming elements:</h3>
                     <ol id="ElementScores">
 
                     </ol>
-                </div>
-                
+                </div>    
             </div>
-         
+        </div>       
+    </div>
 
-
-            </div>
-           
-        </div>
-
-    
-      
-    <!-- Optional JavaScript -->
     
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!-- Optional JavaScript -->
     <script type="text/javascript" src="./highscores.js"></script>  
   </body>
 </html>
